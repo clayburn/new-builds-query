@@ -65,7 +65,13 @@ class App : CliktCommand() {
             .toList()
             .sortedByDescending { (_, value) -> value }
             .toMap()
-            .map { "| [${it.key}]($baseUrl&search.query=project:\"${it.key.urlEncode()}\") | ${it.value} |" }
+            .map {
+                if (it.key == "(N/A)") {
+                    "| ${it.key} | ${it.value} |"
+                } else {
+                    "| [${it.key}]($baseUrl&search.query=project:\"${it.key.urlEncode()}\") | ${it.value} |"
+                }
+            }
             .joinToString(separator = "\n")
 
         return """
@@ -90,7 +96,7 @@ data class BuildInfo(
     val buildStarted: Instant,
 ) {
     constructor(apiBuild: Build) : this(
-        projectName = (apiBuild.models?.gradleAttributes?.model?.rootProjectName ?: apiBuild.models?.mavenAttributes?.model?.topLevelProjectName)!!,
+        projectName = (apiBuild.models?.gradleAttributes?.model?.rootProjectName ?: apiBuild.models?.mavenAttributes?.model?.topLevelProjectName ?: "(N/A)"),
         buildStarted = Instant.ofEpochMilli((apiBuild.models?.gradleAttributes?.model?.buildStartTime ?: apiBuild.models?.mavenAttributes?.model?.buildStartTime)!!),
     )
 }
