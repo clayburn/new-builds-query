@@ -26,3 +26,4 @@ Maven Stub Project*
 eventmesh
 *TsFile*
 TAP5-*
+*James*
