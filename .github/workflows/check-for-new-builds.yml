@@ -1,6 +1,7 @@
 name: Check for new ASF Projects
 
 on:
+  pull_request:
   workflow_dispatch:
   schedule:
     # Every Morning at 11.00am
