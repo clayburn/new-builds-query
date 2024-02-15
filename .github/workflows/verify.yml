@@ -20,4 +20,4 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v3
       - name: Build Gradle Project
-        run: ./gradlew build
+        run: ./gradlew build -PacceptGradleTOS

@@ -21,7 +21,7 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v3
       - name: Build Gradle Project
-        run: ./gradlew installDist
+        run: ./gradlew installDist -PacceptGradleTOS
       - name: Run API Queries
         run: build/install/new-asf-builds-query/bin/new-asf-builds-query --develocity-url=https://ge.apache.org
         env:
