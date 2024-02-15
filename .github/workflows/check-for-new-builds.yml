@@ -1,7 +1,6 @@
 name: Check for new ASF Projects
 
 on:
-  pull_request:
   workflow_dispatch:
   schedule:
     # Every Morning at 11.00am
@@ -14,10 +13,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Set up JDK 20
+      - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
-          java-version: '20'
+          java-version: '21'
           distribution: 'temurin'
       - name: Build Gradle Project
         run: ./gradlew installDist
