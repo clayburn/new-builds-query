@@ -18,7 +18,7 @@ dependencies {
     implementation("org.apache.httpcomponents.client5:httpclient5:5.3.1")
 
     implementation("org.slf4j:slf4j-api:2.0.12")
-    runtimeOnly("org.slf4j:slf4j-simple:2.0.9")
+    runtimeOnly("org.slf4j:slf4j-simple:2.0.12")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
