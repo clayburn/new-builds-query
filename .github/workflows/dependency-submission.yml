@@ -16,8 +16,6 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
-      - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v3
       - name: Generate and submit dependency graph
         uses: gradle/actions/dependency-submission@v3
         with:
