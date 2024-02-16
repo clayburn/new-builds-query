@@ -29,7 +29,7 @@ java {
 }
 
 application {
-    mainClass.set("me.clayjohnson.newasfbuildsquery.AppKt")
+    mainClass.set("me.clayjohnson.newbuildsquery.AppKt")
 }
 
 val develocityVersion = "2023.4"

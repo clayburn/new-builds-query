@@ -1,1 +1,1 @@
-# new-asf-builds-query
+# new-builds-query

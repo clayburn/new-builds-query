@@ -1,4 +1,4 @@
-package me.clayjohnson.newasfbuildsquery
+package me.clayjohnson.newbuildsquery
 
 import java.time.Instant
 import java.time.temporal.ChronoUnit

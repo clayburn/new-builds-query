@@ -1,4 +1,4 @@
-package me.clayjohnson.newasfbuildsquery
+package me.clayjohnson.newbuildsquery
 
 import com.gradle.develocity.api.model.Build
 import java.time.Instant

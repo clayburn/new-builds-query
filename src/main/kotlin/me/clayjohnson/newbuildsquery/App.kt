@@ -1,4 +1,4 @@
-package me.clayjohnson.newasfbuildsquery
+package me.clayjohnson.newbuildsquery
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.parameters.options.default
@@ -7,15 +7,17 @@ import com.github.ajalt.clikt.parameters.options.required
 import com.github.ajalt.clikt.parameters.types.int
 import com.gradle.develocity.api.BuildsApi
 import com.gradle.develocity.api.client.ApiClient
+import java.nio.file.Paths
 import java.time.Instant
 
 fun main(args: Array<String>) = App().main(args)
 
 class App : CliktCommand() {
     private val apiKey by option(envvar = "API_KEY").required()
-    private val develocityUrl by option().required()
+    private val develocityUrl by option(envvar = "DEVELOCITY_URL").required()
+    private val reportFile by option(envvar = "REPORT_FILE").required()
+    private val knownProjectsFile by option(envvar = "KNOWN_PROJECTS_FILE").required()
     private val days by option().int().default(28)
-    private val reportFile by option().default("report.md")
 
     override fun run() {
         val now = Instant.now()
@@ -27,7 +29,7 @@ class App : CliktCommand() {
             }
         }
 
-        val query = QueryBuilder().buildFromResource("known-projects.txt")
+        val query = QueryBuilder().buildFromFile(Paths.get(knownProjectsFile))
 
         val builds = BuildsProcessor(
             buildsApi = buildsApi,

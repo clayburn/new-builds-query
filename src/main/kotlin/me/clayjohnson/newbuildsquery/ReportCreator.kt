@@ -1,4 +1,4 @@
-package me.clayjohnson.newasfbuildsquery
+package me.clayjohnson.newbuildsquery
 
 import java.io.File
 import java.time.Instant
@@ -15,6 +15,7 @@ class ReportCreator(
 
         val report = File(reportFile)
         report.delete()
+        report.parentFile.mkdirs()
         report.writeText(text)
     }
 
