@@ -36,16 +36,11 @@ val develocityVersion = "2023.4"
 val baseApiUrl = providers.gradleProperty("apiManualUrl")
     .orElse("https://docs.gradle.com/enterprise/api-manual/ref/")
 
-val apiSpecificationFileGradleProperty = providers.gradleProperty("apiSpecificationFile")
 val apiSpecificationURL = baseApiUrl.map { "${it}gradle-enterprise-${develocityVersion}-api.yaml" }
-val apiSpecificationFile = apiSpecificationFileGradleProperty
-    .map { s -> file(s) }
-    .orElse(
-        objects.property(File::class)
-            .convention(provider {
-                resources.text.fromUri(apiSpecificationURL).asFile()
-            })
-    ).map { file -> file.absolutePath }
+val apiSpecificationFile = objects.property(File::class)
+    .convention(provider {
+        resources.text.fromUri(apiSpecificationURL).asFile()
+    }).map { file -> file.absolutePath }
 
 val basePackageName = "com.gradle.develocity.api"
 val modelPackageName = "$basePackageName.model"
