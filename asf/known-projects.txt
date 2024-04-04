@@ -27,3 +27,4 @@ eventmesh
 *TsFile*
 TAP5-*
 *James*
+Apache Arrow Java Root POM
