@@ -29,7 +29,7 @@ class App : CliktCommand() {
             }
         }
 
-        val query = QueryBuilder().buildFromFile(Paths.get(knownProjectsFile))
+        val query = QueryBuilder().buildFromFile(Paths.get(knownProjectsFile)) + " (buildTool:gradle OR buildTool:maven)"
 
         val builds = BuildsProcessor(
             buildsApi = buildsApi,
