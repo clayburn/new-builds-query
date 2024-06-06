@@ -54,7 +54,7 @@ class ReportCreator(
             val newKey = if (key == BuildInfo.MISSING_PROJECT_NAME) {
                 key
             } else {
-                "[$key](${createDevelocityUrlForProject(daysAgo, key)}})"
+                "[$key](${createDevelocityUrlForProject(daysAgo, key)})"
             }
 
             newKey to value
