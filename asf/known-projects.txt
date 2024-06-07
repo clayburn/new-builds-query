@@ -30,3 +30,5 @@ TAP5-*
 Apache Arrow Java Root POM
 Apache Creadur Rat
 Apache Log4j BOM
+Apache Whisker
+Apache Tentacles
