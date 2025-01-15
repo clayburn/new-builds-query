@@ -10,7 +10,7 @@ repositories {
 
 dependencies {
     implementation("com.github.ajalt.clikt:clikt:4.4.0")
-    implementation("io.swagger:swagger-annotations:1.6.14")
+    implementation("io.swagger:swagger-annotations:1.6.15")
     implementation("javax.annotation:javax.annotation-api:1.3.2")
     implementation("com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.18.2")
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.18.2")
