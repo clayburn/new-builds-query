@@ -17,8 +17,8 @@ dependencies {
     implementation("com.google.code.findbugs:jsr305:3.0.2")
     implementation("org.apache.httpcomponents.client5:httpclient5:5.4.2")
 
-    implementation("org.slf4j:slf4j-api:2.0.16")
-    runtimeOnly("org.slf4j:slf4j-simple:2.0.16")
+    implementation("org.slf4j:slf4j-api:2.0.17")
+    runtimeOnly("org.slf4j:slf4j-simple:2.0.17")
 }
 
 // Apply a specific Java toolchain to ease working on different environments.
