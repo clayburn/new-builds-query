@@ -12,7 +12,7 @@ dependencies {
     implementation("com.github.ajalt.clikt:clikt:4.4.0")
     implementation("io.swagger:swagger-annotations:1.6.15")
     implementation("javax.annotation:javax.annotation-api:1.3.2")
-    implementation("com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.18.2")
+    implementation("com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.18.3")
     implementation("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.18.3")
     implementation("com.google.code.findbugs:jsr305:3.0.2")
     implementation("org.apache.httpcomponents.client5:httpclient5:5.4.2")
