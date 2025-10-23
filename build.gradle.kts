@@ -1,6 +1,6 @@
 plugins {
     id("org.openapi.generator") version "7.16.0"
-    id("org.jetbrains.kotlin.jvm") version "2.2.20"
+    id("org.jetbrains.kotlin.jvm") version "2.2.21"
     application
 }
 
